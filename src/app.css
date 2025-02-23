@@ -1,0 +1,244 @@
+.App { 
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Header Styling */
+.App-header {
+  background-color: white;
+  color: darkblue;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav-links li a {
+  color: darkblue;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.Nav-links li a:hover {
+  color: #6a5acd;
+}
+
+/* Main Content Styling */
+.App-main {
+  padding: 40px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Upload Component Styling */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.upload-input {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid darkblue;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.upload-input:focus {
+  border-color: darkblue;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+}
+
+.upload-button {
+  background-color: darkblue;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-button:hover {
+  background-color: #00008b;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.file-name {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Options Section Styling */
+.Options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.Option {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Option h2 {
+  font-size: 1.5rem;
+  color: darkblue;
+  margin-bottom: 10px;
+}
+
+.Option p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.Option button {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.Option button:hover {
+  background-color: darkblue;
+}
+
+.Option div {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.App-footer {
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.App-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.App-footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.App-footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .App-footer {
+    padding: 15px;
+  }
+
+  .App-footer a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .upload-container {
+    width: 90%;
+  }
+
+  .Nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header, .App-footer {
+    padding: 15px;
+  }
+
+  .upload-button, .Option button {
+    width: 100%;
+  }
+
+  .App-logo {
+    font-size: 1.5rem;
+  }
+}

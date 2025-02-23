@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './upload.css';
+import './upload.css'; // Ensure the CSS file is imported
 
 const UploadFile = () => {
   const [file, setFile] = useState(null);
@@ -15,6 +15,11 @@ const UploadFile = () => {
     }
   };
 
+  const handleAdvanced = () => {
+    console.log("Advanced button clicked");
+    // Add advanced functionality here
+  };
+
   return (
     <div className="upload-container">
       <input 
@@ -23,7 +28,10 @@ const UploadFile = () => {
         className="upload-input" 
       />
       <button onClick={handleUpload} className="upload-button">
-        Upload
+        Easy
+      </button>
+      <button onClick={handleAdvanced} className="upload-button">
+        Advanced
       </button>
       {file && <p className="file-name">Selected file: {file.name}</p>}
     </div>

@@ -12,7 +12,7 @@ function App() {
             <li><a href="#home" className="hover:text-blue-200 transition-colors">Home</a></li>
             <li><a href="#about" className="hover:text-blue-200 transition-colors">About</a></li>
             <li><a href="#contact" className="hover:text-blue-200 transition-colors">Contact</a></li>
-            <li><a href="#profile" className="hover:text-blue-200 transition-colors">Profile</a></li>
+
             <li><a href="#login" className="hover:text-blue-200 transition-colors">Login/Sign-Up</a></li>
           </ul>
         </nav>
